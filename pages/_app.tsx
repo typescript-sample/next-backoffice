@@ -84,7 +84,42 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
+export function formatDate(date: Date| null | undefined, format: string) {
+  if (!date) return ""
+  const options: any = {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric',
+    hour12: false
+  };
+  const formattedDate = new Date(date).toLocaleString('en-US', options);
+  let formattedOutput = format.replace('YYYY', formattedDate.slice(6, 10));
+  formattedOutput = formattedOutput.replace('MM', formattedDate.slice(0, 2));
+  formattedOutput = formattedOutput.replace('DD', formattedDate.slice(3, 5));
+  formattedOutput = formattedOutput.replace('HH', formattedDate.slice(12, 14));
+  formattedOutput = formattedOutput.replace('mm', formattedDate.slice(15, 17));
+  formattedOutput = formattedOutput.replace('ss', formattedDate.slice(18, 20));
+  return formattedOutput;
+}
 
+export const formatDateTimeToString = (inputDate: Date | string) => {
+  const date = typeof inputDate !== 'string' ? inputDate : new Date(inputDate);
+  if (inputDate == "" || inputDate == null)
+  {
+    return ""
+  }
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, '0');
+  const day = String(date.getDate()).padStart(2, '0');
+  const hours = String(date.getHours()).padStart(2, '0');
+  const minutes = String(date.getMinutes()).padStart(2, '0');
+  const seconds = String(date.getSeconds()).padStart(2, '0');
+
+  return `${year}-${month}-${day}T${hours}:${minutes}:${seconds}`;
+};
 export default function App({ Component, pageProps, router }: AppPropsWithLayout) {
   init()
   if (router.pathname.startsWith('/signin')
