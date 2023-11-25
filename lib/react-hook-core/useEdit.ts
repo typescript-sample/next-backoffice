@@ -366,6 +366,7 @@ export const useCoreEdit = <T, ID, S, P>(
   const _postSave = (obj: T, res: number | ResultInfo<T>, version?: string, backOnSave?: boolean) => {
     setRunning(false);
     hideLoading(p1.loading);
+    debugger
     const x: any = res;
     const successMsg = p1.resource.value('msg_save_success');
     const newMod = flag.newMode;

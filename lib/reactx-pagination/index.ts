@@ -89,7 +89,6 @@ export class Pagination extends React.Component<Props, any> {
     this.gotoPage(this.page + this.max * 2 + 1);
   }
   fetchPageNumbers = () => {
-    debugger
     const totalPages = this.totalPages;
     const maxSize = this.max;
 

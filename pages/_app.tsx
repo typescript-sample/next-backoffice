@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../assets/globals.css'
 import '@lib/reactx-carousel/carousel.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'

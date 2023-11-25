@@ -17,6 +17,7 @@ export interface Role extends Tracking {
 export interface Privilege {
   id: string;
   name: string;
+  actions: number;
   children?: Privilege[];
 }
 export interface RoleService extends Service<Role, string, RoleFilter> {

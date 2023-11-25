@@ -25,11 +25,17 @@ export const en = {
   role_id: 'Role Id',
   role_name: 'Role Name',
   role_system_role: 'System Role',
+  module: 'Module',
 
   all_privileges: 'All Privileges',
 
   role_assigned_users: 'Assigned Users',
   role_roles_assign_to_groups: 'Role Assign To Group(s)',
+
+  read: 'Read',
+  write: 'Write',
+  delete: 'Delete',
+  approve: 'Approve',
 
   // Audit log
   audit_logs: 'Audit logs',

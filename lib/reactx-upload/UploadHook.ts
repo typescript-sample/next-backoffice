@@ -104,7 +104,6 @@ export const useUpload = (props: Props) => {
 
       const img = new Image();
       img.onload = (imageEvent) => {
-        debugger;
         console.log(img.naturalHeight, img.naturalWidth);
         resolve(img);
       };

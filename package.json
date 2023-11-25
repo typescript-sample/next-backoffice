@@ -49,7 +49,7 @@
     "ui-plus": "^0.0.10",
     "ui-toast": "^0.0.5",
     "validation-core": "^0.0.4",
-    "web-clients": "^0.1.24"
+    "web-clients": "^0.1.29"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.0",

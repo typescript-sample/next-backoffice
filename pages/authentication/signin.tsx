@@ -86,7 +86,6 @@ const SigninForm = () => {
     router.push(storage.home)
   };
   const signin = async (event: OnClick) => {
-    debugger
     event.preventDefault();
     const r = getResource();
     const user = state.user;

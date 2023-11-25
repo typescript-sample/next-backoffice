@@ -31,6 +31,11 @@ export const vi = {
   role_assigned_users: 'Assigned Users',
   role_roles_assign_to_groups: 'Role Assign To Group(s)',
 
+  read: 'Read',
+  write: 'Write',
+  delete: 'Delete',
+  approve: 'Approve',
+
   // Audit log
   audit_logs: 'Audit logs',
   audit_log_time: 'Date time',
